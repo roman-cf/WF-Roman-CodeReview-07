@@ -9,5 +9,6 @@
 	margin-left: 50%;
 }
 
-.nav-colored { background-color:#2C5C8C; }
-.nav-transparent { background-color:transparent;}
+.nav-colored { background-color:#2C5C8C; transition: 2s}
+.nav-transparent { background-color:transparent; transition: 2s}
+
