@@ -35,6 +35,7 @@ constructor(private firebase: AngularFireDatabase) { }
         }
     reInsertElements(travels){
   		this.form.setValue(travels);
+  		window.scrollTo({ top: 400, left: 0, behavior: "smooth"})
   	}
 
   	updateTravel(travels){

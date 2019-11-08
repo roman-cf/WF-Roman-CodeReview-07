@@ -4,15 +4,16 @@
 				<div class="card-body">
 				
                         <h4 class="card-title">{{travels.title}}
-                                <button class="btn btn-info offset-9" (click)="travelService.reInsertElements(travels) ">e</button>
-                                <button class="btn btn-danger" (click)="wantToDeleteElement(travels.$key)">x</button>
-
                             </h4>
                         <div class="card-text">{{travels.description}}</div>
                         <div>{{travels.country}}</div>
 				</div>
 
                 <img class="card-img" src="{{travels.picUrl}}" alt="{{travels.title}}" >
+                <div class="card-img-overlay offset-10" >
+					<button class="btn btn-info" (click)="travelService.reInsertElements(travels) ">e</button>
+					<button class="btn btn-danger" (click)="wantToDeleteElement(travels.$key)">x</button>
+				</div>
                         
                         
 		</div>

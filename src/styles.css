@@ -8,3 +8,6 @@
 .containerhero{
 	margin-left: 50%;
 }
+
+.nav-colored { background-color:#2C5C8C; }
+.nav-transparent { background-color:transparent;}
