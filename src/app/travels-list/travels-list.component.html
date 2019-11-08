@@ -1,0 +1,21 @@
+<ng-container *ngFor="let travels of travelArray">
+<div class="card-deck m-1">
+		<div class="card">
+				<div class="card-body">
+				
+                        <h4 class="card-title">{{travels.title}}
+                                <button class="btn btn-info offset-9" (click)="travelService.reInsertElements(travels) ">e</button>
+                                <button class="btn btn-danger" (click)="wantToDeleteElement(travels.$key)">x</button>
+
+                            </h4>
+                        <div class="card-text">{{travels.description}}</div>
+                        <div>{{travels.country}}</div>
+				</div>
+
+                <img class="card-img" src="{{travels.picUrl}}" alt="{{travels.title}}" >
+                        
+                        
+		</div>
+</div>               
+</ng-container>
+<div class="alert alert-danger" *ngIf="showDeletedMessage" >Deleted successfully</div>

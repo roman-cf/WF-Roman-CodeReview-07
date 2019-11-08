@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+.jumbotron {
+	background: url('/assets/img/csm_skifahren13_761ef236a6.jpg') no-repeat center;
+	color: white;
+	background-size: cover;
+	height: 50vh;
+	border-radius: 0;
+}	
+.containerhero{
+	margin-left: 50%;
+}
