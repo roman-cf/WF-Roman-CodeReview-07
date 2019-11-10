@@ -1,1 +1,13 @@
-<p>blog-page works!</p>
+<ng-container *ngFor="let travels of travelArray">
+<div class="card-deck m-1">
+		<div class="card">
+				<div class="card-body">
+                        <h4 class="card-title">{{travels.title}}
+                            </h4>
+                        <div class="card-text">{{travels.description}}</div>
+				</div>
+                <div class="card-img-overlay offset-10" >
+				</div>             
+		</div>
+</div>               
+</ng-container>

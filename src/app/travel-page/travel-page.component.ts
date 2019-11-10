@@ -12,5 +12,5 @@ export class TravelPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
+

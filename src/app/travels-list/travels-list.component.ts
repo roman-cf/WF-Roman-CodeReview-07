@@ -24,7 +24,6 @@ export class TravelsListComponent implements OnInit {
 						}
 					})
 				});;
-
   }
 
   wantToDeleteElement($key){
@@ -32,7 +31,6 @@ export class TravelsListComponent implements OnInit {
         this.travelService.deleteTravel($key);
         this.showDeletedMessage = true;
         setTimeout(()=> this.showDeletedMessage=false , 3000)
-       }
-
+       }	
   }
 }

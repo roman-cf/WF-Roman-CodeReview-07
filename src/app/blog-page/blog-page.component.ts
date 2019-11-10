@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TravelsService }from "../shared/travels.service";
+
 
 @Component({
   selector: 'app-blog-page',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-page.component.css']
 })
 export class BlogPageComponent implements OnInit {
+	travelArray=[];
 
-  constructor() { }
+  constructor(private travelService: TravelsService) { }
 
   ngOnInit() {
+  	this.travelService.getTravels().subscribe(
+				(list) => {
+					this.travelArray = list.map( (item) => {
+						return {
+							$key : item.key,
+							...item.payload.val()
+						}
+					})
+				});;
   }
-
 }

@@ -15,7 +15,7 @@ export class TravelsComponent implements OnInit {
 	showSuccessMessage: boolean;
   
   ngOnInit() {
-  }
+  }	
 
 onSubmit(){
 	this.submitted=true;
