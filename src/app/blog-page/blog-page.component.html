@@ -1,7 +1,15 @@
-<form class="form-inline">
-        <input name="searchInput" class="form-control"  placeholder="Search for trip" #searchInput="ngModel"  [(ngModel)]="searchText" >
+<div class="media mt-4">
+  <div class=" img64 d-flex align-self-start  mr-3"></div>
+  <div class="media-body">
+    <h5 class="mt-0"> search for trip</h5>
+    <form class="form-inline">
+        <input name="searchInput" class="form-control"  placeholder="Search" #searchInput="ngModel"  [(ngModel)]="searchText" >
         <button class="btn btn-outline-primary"  (click)="searchText=''">x</button>
-</form>
+	</form>
+  </div>
+</div>     
+
+
 <ng-container *ngFor="let travels of travelArray">      
 <div class="media mt-4" *ngIf ="filterCondition(travels)">
   <img class=" img64 d-flex align-self-start  mr-3" data-src="{{travels.picUrl}}" alt="{{travels.title}}">
