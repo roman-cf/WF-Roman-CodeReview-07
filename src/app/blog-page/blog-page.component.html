@@ -1,13 +1,10 @@
 <ng-container *ngFor="let travels of travelArray">
-<div class="card-deck m-1">
-		<div class="card">
-				<div class="card-body">
-                        <h4 class="card-title">{{travels.title}}
-                            </h4>
-                        <div class="card-text">{{travels.description}}</div>
-				</div>
-                <div class="card-img-overlay offset-10" >
-				</div>             
-		</div>
-</div>               
+        
+<div class="media mt-4">
+  <img class=" img64 d-flex align-self-start  mr-3" data-src="{{travels.picUrl}}" alt="{{travels.title}}">
+  <div class="media-body">
+    <h5 class="mt-0"> {{travels.title}}</h5>
+    {{travels.description}}
+  </div>
+</div>     
 </ng-container>
