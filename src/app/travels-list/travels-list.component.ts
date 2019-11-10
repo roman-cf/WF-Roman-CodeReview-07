@@ -10,7 +10,7 @@ import { TravelsService }from "../shared/travels.service";
 export class TravelsListComponent implements OnInit {
 	travelArray=[];
 	showDeletedMessage : boolean;
-
+	searchText:string = "";
 
   constructor(private travelService: TravelsService) { }
 

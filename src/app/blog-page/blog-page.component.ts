@@ -9,6 +9,7 @@ import { TravelsService }from "../shared/travels.service";
 })
 export class BlogPageComponent implements OnInit {
 	travelArray=[];
+	searchText:string = "";
 
   constructor(private travelService: TravelsService) { }
 
@@ -23,4 +24,7 @@ export class BlogPageComponent implements OnInit {
 					})
 				});;
   }
+  filterCondition(travels){
+     return travels.description.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1 ;
+   }
 }

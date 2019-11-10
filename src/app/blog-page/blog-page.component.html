@@ -1,6 +1,9 @@
-<ng-container *ngFor="let travels of travelArray">
-        
-<div class="media mt-4">
+<form class="form-inline">
+        <input name="searchInput" class="form-control"  placeholder="Search for trip" #searchInput="ngModel"  [(ngModel)]="searchText" >
+        <button class="btn btn-outline-primary"  (click)="searchText=''">x</button>
+</form>
+<ng-container *ngFor="let travels of travelArray">      
+<div class="media mt-4" *ngIf ="filterCondition(travels)">
   <img class=" img64 d-flex align-self-start  mr-3" data-src="{{travels.picUrl}}" alt="{{travels.title}}">
   <div class="media-body">
     <h5 class="mt-0"> {{travels.title}}</h5>
@@ -8,3 +11,4 @@
   </div>
 </div>     
 </ng-container>
+<p>this media-tags are filled with data from den Travelsite</p>
